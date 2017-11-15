@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ps"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rl_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10px"
+        android:paddingLeft="100dp"
+        android:paddingRight="150dp"
+        tools:padding="10dp">
+
+        <LinearLayout
+            android:id="@+id/bright"
+            android:layout_width="fill_parent"
+            android:layout_height="44.0dip"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="#00000000"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="44.0dip"
+                android:layout_marginLeft="20dp"
+                android:gravity="center_vertical"
+                android:text="设置亮屏时长:"
+                android:textSize="16.0sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/bright_screen_time"
+                android:layout_width="180dp"
+                android:layout_height="44.0dip"
+                android:layout_marginRight="20dp"
+                android:background="#00ffffff"
+                android:gravity="center_vertical"
+                android:hint="请输入亮屏时长（s）"
+                android:maxLength="16"
+                android:maxLines="1"
+                android:numeric="integer"
+                android:textColor="#ff1d1d1d"
+                android:textColorHint="#ff666666"
+                android:textSize="16.0sp" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="fill_parent"
+            android:layout_height="1.0px"
+            android:layout_marginLeft="1.0px"
+            android:layout_marginRight="1.0px"
+            android:background="#ffffff" />
+
+        <LinearLayout
+            android:id="@+id/black"
+            android:layout_width="fill_parent"
+            android:layout_height="44.0dip"
+            android:layout_below="@+id/bright"
+            android:background="#00000000"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="44.0dip"
+                android:layout_marginLeft="20dp"
+                android:gravity="center_vertical"
+                android:text="设置灭屏时长:"
+                android:textSize="16.0sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/black_screen_time"
+                android:layout_width="180dp"
+                android:layout_height="44.0dip"
+                android:layout_marginRight="20dp"
+                android:background="#00ffffff"
+                android:hint="请输入灭屏时长（s）"
+                android:maxLength="16"
+                android:maxLines="1"
+                android:numeric="integer"
+                android:textColor="#ff1d1d1d"
+                android:textColorHint="#ff666666"
+                android:textSize="16.0sp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1.0px"
+            android:layout_marginLeft="1.0px"
+            android:layout_marginRight="1.0px"
+            android:background="#ffffff" />
+
+
+        <LinearLayout
+            android:id="@+id/total"
+            android:layout_width="fill_parent"
+            android:layout_height="44.0dip"
+            android:layout_below="@+id/black"
+            android:background="#00000000"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="44.0dip"
+                android:layout_marginLeft="20dp"
+                android:gravity="center_vertical"
+                android:text="设置总次数:"
+                android:textSize="16.0sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/total_test_count"
+                android:layout_width="180dp"
+                android:layout_height="44.0dip"
+                android:layout_marginRight="20dp"
+                android:background="#00ffffff"
+                android:hint="请输入总次数："
+                android:maxLength="16"
+                android:maxLines="1"
+                android:numeric="integer"
+                android:textColor="#ff1d1d1d"
+                android:textColorHint="#ff666666"
+                android:textSize="16.0sp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1.0px"
+            android:layout_marginLeft="1.0px"
+            android:layout_marginRight="1.0px"
+            android:background="#ffffff" />
+
+        <LinearLayout
+            android:id="@+id/tips"
+            android:layout_width="fill_parent"
+            android:layout_height="44.0dip"
+            android:layout_below="@+id/total"
+            android:background="#00000000"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/test_tips"
+                android:layout_width="fill_parent"
+                android:layout_height="44.0dip"
+                android:layout_marginLeft="20dp"
+                android:gravity="center_vertical"
+                android:text="tips:"
+                android:textSize="16.0sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/view"
+            android:layout_below="@+id/tips"
+            android:layout_marginTop="18dp">
+
+
+            <Button
+                android:id="@+id/s_cancel"
+                android:layout_width="200px"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="30dp"
+                android:layout_toLeftOf="@+id/s_ok"
+                android:background="@drawable/shape_bg_button"
+                android:text="取 消" />
+
+
+            <Button
+                android:id="@+id/s_ok"
+                android:layout_width="200px"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/shape_bg_button"
+                android:text="确 认" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+</RelativeLayout>
